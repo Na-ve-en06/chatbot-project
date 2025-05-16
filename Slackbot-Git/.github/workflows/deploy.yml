@@ -1,12 +1,23 @@
 name: Deploy App
 
 on:
-  workflow_dispatch:  # this lets you run it manually
+  workflow_dispatch:  # manual trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print deploy message
-        run: echo "🚀 Code deployed by Slackbot!"
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run your deploy script
+      run: python app.py
