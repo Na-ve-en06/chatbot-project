@@ -1,0 +1,12 @@
+name: Deploy App
+
+on:
+  workflow_dispatch:  # this lets you run it manually
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print deploy message
+        run: echo "🚀 Code deployed by Slackbot!"
