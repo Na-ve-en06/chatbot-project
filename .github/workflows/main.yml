@@ -1,0 +1,14 @@
+name: Echo Example
+
+on:
+  push:
+    branches:
+      - main  # or 'master' depending on your default branch
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run echo command
+        run: echo "Hello, this is a simple GitHub Actions workflow!"
