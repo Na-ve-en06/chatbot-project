@@ -1,10 +1,7 @@
 name: Echo Example
 
 on:
-  push:
-    branches:
-      - main  # or 'master' depending on your default branch
-
+  workflow_dispatch:
 jobs:
   echo-job:
     runs-on: ubuntu-latest
