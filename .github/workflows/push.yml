@@ -1,0 +1,11 @@
+name: push workflow
+
+on: 
+  push:
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run push command
+        run: echo "running of push workflow"
