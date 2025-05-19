@@ -1,0 +1,11 @@
+name: Deploy App
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo "🚀 Deployment started from Slack!"
